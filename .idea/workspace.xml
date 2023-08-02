@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f469f9a-391b-47e0-b8ea-a31e032dac6c" name="Changes" comment="Создание таблицы">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Users.java" afterDir="false" />
@@ -19,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -98,7 +99,7 @@
       <workItem from="1690694661395" duration="4671000" />
       <workItem from="1690948896791" duration="156000" />
       <workItem from="1690949087191" duration="156000" />
-      <workItem from="1690949274120" duration="12866000" />
+      <workItem from="1690949274120" duration="21201000" />
     </task>
     <servers />
   </component>

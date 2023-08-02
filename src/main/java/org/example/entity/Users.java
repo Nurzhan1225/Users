@@ -10,11 +10,11 @@ public class Users {
     private Long id;
     private String name;
     private String surname;
-
-
-    public Long getId() {
-        return id;
-    }
+    private String login;
+    private String password;
+    @ManyToOne
+    @JoinColumn(name = "city_id")
+    private City city;
 
     @Override
     public String toString() {
@@ -22,6 +22,10 @@ public class Users {
                 "Имя: " + name +
                 "\nФамилия: " + surname +
                 "\n" + city;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setId(Long id) {
@@ -68,9 +72,5 @@ public class Users {
         this.city = city;
     }
 
-    private String login;
-    private String password;
-    @ManyToOne
-    @JoinColumn(name = "city_id")
-    private City city;
+
 }

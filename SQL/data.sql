@@ -1,4 +1,4 @@
---drop  table if exists city, users
+drop  table if exists city, users;
 
 create table city(
 id serial8,

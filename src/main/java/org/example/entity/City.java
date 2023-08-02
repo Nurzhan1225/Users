@@ -12,6 +12,8 @@ public class City {
     private Long id;
     private Integer index;
     private String name;
+    @OneToMany(mappedBy = "city")
+    private List<Users> users;
 
     @Override
     public String toString() {
@@ -51,7 +53,4 @@ public class City {
     public void setUsers(List<Users> users) {
         this.users = users;
     }
-
-    @OneToMany(mappedBy = "city")
-    private List<Users> users;
 }
