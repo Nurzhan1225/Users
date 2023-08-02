@@ -5,27 +5,27 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "users")
 public class Users {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-private Integer index;
-private String name;
+    private String name;
     private String surname;
+
 
     public Long getId() {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "Пользователь:\n" +
+                "Имя: " + name +
+                "\nФамилия: " + surname +
+                "\n" + city;
+    }
+
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Integer getIndex() {
-        return index;
-    }
-
-    public void setIndex(Integer index) {
-        this.index = index;
     }
 
     public String getName() {
@@ -70,7 +70,7 @@ private String name;
 
     private String login;
     private String password;
-@ManyToOne
+    @ManyToOne
     @JoinColumn(name = "city_id")
     private City city;
 }

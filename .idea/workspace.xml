@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f469f9a-391b-47e0-b8ea-a31e032dac6c" name="Changes" comment="Создание таблицы">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +98,7 @@
       <workItem from="1690694661395" duration="4671000" />
       <workItem from="1690948896791" duration="156000" />
       <workItem from="1690949087191" duration="156000" />
-      <workItem from="1690949274120" duration="2619000" />
+      <workItem from="1690949274120" duration="12866000" />
     </task>
     <servers />
   </component>

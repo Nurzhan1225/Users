@@ -1,9 +1,10 @@
 package org.example;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
+import jakarta.persistence.*;
+import org.example.entity.Users;
+import org.hibernate.query.TypedTupleTransformer;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -45,7 +46,20 @@ public class Main {
         try {
             manager.getTransaction().begin();
             System.out.println("Введите логин: ");
-
+            String login = scanner.nextLine();
+            System.out.println("Введите пароль: ");
+            String password = scanner.nextLine();
+            TypedQuery<Users> usersTypedQuery = manager.createQuery(
+                    "select u from Users u where u.login = ?1 and u.password = ?2", Users.class
+            );
+            usersTypedQuery.setParameter(1, login);
+            usersTypedQuery.setParameter(2, password);
+            try {
+                Users users = usersTypedQuery.getSingleResult();
+                System.out.println(users);
+            } catch (NoResultException e) {
+                System.out.println("Не правильный логин или пароль");
+            }
         } catch (Exception e) {
             manager.getTransaction().rollback();
             e.printStackTrace();

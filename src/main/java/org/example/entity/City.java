@@ -13,6 +13,13 @@ public class City {
     private Integer index;
     private String name;
 
+    @Override
+    public String toString() {
+        return
+                "Город: " + name +
+                        "\nИндекс: " + index;
+    }
+
     public Long getId() {
         return id;
     }
