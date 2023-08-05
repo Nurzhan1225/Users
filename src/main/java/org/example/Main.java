@@ -5,6 +5,7 @@ import org.example.entity.City;
 import org.example.entity.Users;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -29,7 +30,7 @@ public class Main {
                 "- Регистрация [2]\n" +
                 //"- Завершить процесс [3]\n" +
                 "Выберите действие:");
-        Integer AR = Integer.parseInt(scanner.nextLine());
+        int AR = Integer.parseInt(scanner.nextLine());
         if (AR == 1) {
             authorization();
         } else if (AR == 2) {
@@ -58,7 +59,45 @@ public class Main {
             } catch (NoResultException e) {
                 System.out.println("Не правильный логин или пароль");
             }
+            System.out.println("Изменить данные [2]");
+            int change = Integer.parseInt(scanner.nextLine());
+            if (change == 2) {
+                System.out.println("Имя: " + usersTypedQuery.getSingleResult().getName());
+                String name = scanner.nextLine();
+                if (!name.equals("")) {
+                    usersTypedQuery.getSingleResult().setName(name);
+                }
+                System.out.println("Фамилия: " + usersTypedQuery.getSingleResult().getSurname());
+                String surname = scanner.nextLine();
+                if (!surname.equals("")) {
+                    usersTypedQuery.getSingleResult().setSurname(surname);
+                }
+                System.out.println("Город: " + usersTypedQuery.getSingleResult().getCity().getName());
 
+                TypedQuery<City> cityTypedQuery = manager.createQuery(
+                        "select c from City c order by c.id", City.class
+                );
+                List<City> cities = cityTypedQuery.getResultList();
+                System.out.println("Новый город: [0]");
+                for (int i = 0; i < cities.size(); i++) {
+                    System.out.println(cities.get(i).getName() + " [" + (i + 1) + "]");
+                }
+                System.out.println("Выберите город: ");
+                int cityID = Integer.parseInt(scanner.nextLine());
+                City city = new City();
+                if (cityID == 0) {
+                    System.out.println("Введите город: ");
+                    String newCity = scanner.nextLine();
+                    System.out.println("Введите индекс " + newCity + ": ");
+                    Integer index = Integer.parseInt(scanner.nextLine());
+                    city.setName(newCity);
+                    city.setIndex(index);
+                    manager.persist(city);
+                } else if (cityID <= cities.size()) {
+                    city = cities.get(cityID - 1);
+                }
+                usersTypedQuery.getSingleResult().setCity(city);
+            }
             manager.getTransaction().commit();
         } catch (Exception e) {
             manager.getTransaction().rollback();
@@ -111,7 +150,6 @@ public class Main {
             users.setSurname(surname);
             users.setCity(city);
             manager.persist(users);
-
             manager.getTransaction().commit();
         } catch (Exception e) {
             manager.getTransaction().rollback();
