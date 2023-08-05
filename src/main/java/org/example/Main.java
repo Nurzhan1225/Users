@@ -28,7 +28,6 @@ public class Main {
         // Фамилия:
         System.out.println("- Авторизация [1]\n" +
                 "- Регистрация [2]\n" +
-                //"- Завершить процесс [3]\n" +
                 "Выберите действие:");
         int AR = Integer.parseInt(scanner.nextLine());
         if (AR == 1) {
@@ -59,7 +58,8 @@ public class Main {
             } catch (NoResultException e) {
                 System.out.println("Не правильный логин или пароль");
             }
-            System.out.println("Изменить данные [2]");
+            System.out.println("Изменить данные [2]\n" +
+                    "Удалить пользователя [3]");
             int change = Integer.parseInt(scanner.nextLine());
             if (change == 2) {
                 System.out.println("Имя: " + usersTypedQuery.getSingleResult().getName());
@@ -97,6 +97,9 @@ public class Main {
                     city = cities.get(cityID - 1);
                 }
                 usersTypedQuery.getSingleResult().setCity(city);
+            }
+            if (change == 3){
+                manager.remove(usersTypedQuery.getSingleResult());
             }
             manager.getTransaction().commit();
         } catch (Exception e) {

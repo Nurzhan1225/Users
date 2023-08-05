@@ -7,7 +7,6 @@
     <list default="true" id="4f469f9a-391b-47e0-b8ea-a31e032dac6c" name="Changes" comment="Создание таблицы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main1.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,7 @@
       <workItem from="1690949087191" duration="156000" />
       <workItem from="1690949274120" duration="22206000" />
       <workItem from="1691152179615" duration="1120000" />
-      <workItem from="1691211568932" duration="2952000" />
+      <workItem from="1691211568932" duration="4986000" />
     </task>
     <servers />
   </component>
